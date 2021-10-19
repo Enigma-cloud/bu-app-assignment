@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-    <title>APP Assignment - Main</title>
+    <title>BU APP</title>
 {% endblock %}
 {% block body %}
     <!-- Thought of the day -->
@@ -52,44 +52,53 @@
             <h3 id="calculator">Calculator</h3>
             <div class="line"></div>
         </div>
+        <h4 class="sub-heading">Enter values and click buttons</h4>
         <div class="text-content">
             <h3 class="sub-heading">Addition</h3>
-            <div class="calc-display">
-                <input type="string" id="add1"/> + <input type="string" id="add2"/> = <input type="text" id="inputAdd"/>
-            </div>
-            <div class="calc-btn">
-                <button class="btn" id="btnAdd" onclick="addNumbers()">Add</button></p>
-                <button class="btn" id="btnAddAPI" >Add via API</button>
+            <div class="calc-wrapper">
+                <div class="calc-display">
+                    <input type="string" id="add1"/> + <input type="string" id="add2"/> = <input class="input-readonly" type="text" id="inputAdd" readonly/>
+                </div>
+                <div class="calc-btn">
+                    <button class="btn" id="btnAdd" onclick="addNumbers()">Add</button></p>
+                    <button class="btn" id="btnAddAPI" >Add via API</button>
+                </div>
             </div>
         </div>
         <div class="text-content">
             <h3 class="sub-heading">Subtract</h3>
-            <div class="calc-display">
-                <input type="string" id="sub1"/> - <input type="string" id="sub2"/> = <input type="text" id="inputSubtract"/>
-            </div>
-            <div class="calc-btn">
-                <button class="btn" id="btnSubtract" onclick="subtractNumbers()">Subtract</button>
-                <button class="btn" id="btnSubtractAPI"> Subtract via API</button>
+            <div class="calc-wrapper">
+                <div class="calc-display">
+                    <input type="string" id="sub1"/> - <input type="string" id="sub2"/> = <input class="input-readonly" type="text" id="inputSubtract" readonly/>
+                </div>
+                <div class="calc-btn">
+                    <button class="btn" id="btnSubtract" onclick="subtractNumbers()">Subtract</button>
+                    <button class="btn" id="btnSubtractAPI"> Subtract via API</button>
+                </div>
             </div>
         </div>
         <div class="text-content">
             <h3 class="sub-heading">Multiply</h3>
-            <div class="calc-display">
-                <input type="string" id="multi1"/> x <input type="string" id="multi2"/> = <input type="text" id="inputMultiply"/>
-            </div>
-            <div class="calc-btn">
-                <button class="btn" id="btnMultiply" onclick="multiplyNumbers()">Multiply</button>
-                <button class="btn" id="btnMultiplyAPI">Multiply via API</button>
+            <div class="calc-wrapper">
+                <div class="calc-display">
+                    <input type="string" id="multi1"/> x <input type="string" id="multi2"/> = <input class="input-readonly" type="text" id="inputMultiply" readonly/>
+                </div>
+                <div class="calc-btn">
+                    <button class="btn" id="btnMultiply" onclick="multiplyNumbers()">Multiply</button>
+                    <button class="btn" id="btnMultiplyAPI">Multiply via API</button>
+                </div>
             </div>
         </div>
         <div class="text-content">
             <h3 class="sub-heading">Divide</h3>
-            <div class="calc-display">
-                <input type="string" id="divi1"/> / <input type="string" id="divi2"/> = <input type="text" id="inputDivide"/>
-            </div>
-            <div class="calc-btn">
-                <button class="btn" id="btnDivide" onclick="divideNumbers()">Divide</button>
-                <button class="btn" id="btnDivideAPI">Divide via API</button>
+            <div class="calc-wrapper">
+                <div class="calc-display">
+                    <input type="string" id="divi1"/> / <input type="string" id="divi2"/> = <input class="input-readonly" type="text" id="inputDivide" readonly/>
+                </div>
+                <div class="calc-btn">
+                    <button class="btn" id="btnDivide" onclick="divideNumbers()">Divide</button>
+                    <button class="btn" id="btnDivideAPI">Divide via API</button>
+                </div>
             </div>
         </div>
     </div>
@@ -101,7 +110,7 @@
             <h3 id="journal">Journal</h3>
             <div class="line"></div>
         </div>
-
+        <h4 class="sub-heading">Record your journey</h4>
         <div class="text-content">
             <div class="sub-container" id="journalFrame">
                 <div class="sidebar" id="journalSelection">

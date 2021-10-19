@@ -79,25 +79,43 @@ form > button {
     float: right;
 }
 
+.input-readonly {
+    cursor: default;
+    border: 3px solid gray;
+}
+
+.input-readonly:focus {
+    outline: none;
+}
+
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     margin: 40px 40px;
     padding: 40px 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
-    width: 60%;
+    width: 50%;
     max-height: fit-content;
     overflow: hidden;
 }
 
-.container.wide {
-    width: 65em;
-}
-
 .sub-container {
     display: flex;
-    justify-content: space-evenly;
-    flex-grow: 1;
+    gap: 1.5em;
+}
+
+@media screen and (max-width: 1200px) {
+    .container.wide {
+        width: 80%;
+    }
+
+    .sub-container {
+        flex-direction: column;
+    }
 }
 
 .sidebar {
@@ -166,6 +184,7 @@ form > button {
     background-size: 200% auto;
     color: #fff;            
     border-radius: 100px;
+    max-width: 100px;
 }
 
 .btn:hover {
@@ -180,6 +199,7 @@ form > button {
     flex-flow: column wrap;
     background-color: var(--raisin-black-v1);
     color: #fff;
+    width: 80%;
     max-width: 100%;
     border-radius: 5px;
     margin: 10px;
@@ -380,10 +400,15 @@ form > button {
 
 /* CALCULATOR */
 
+.calc-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .calc-display {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    gap: 1em;
 }
 
 .calc-btn {
