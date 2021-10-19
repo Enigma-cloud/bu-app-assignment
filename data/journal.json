@@ -1,0 +1,19 @@
+{
+    "journals": [
+        {
+            "date": "2021-01-06 16:43:08",
+            "name": "Kristian",
+            "notes": "This is the very first note"
+        },
+        {
+            "date": "2021-01-05 16:43:08",
+            "name": "Alice",
+            "notes": "This is the second note"
+        },
+        {
+            "date": "2021-01-04 16:43:08",
+            "name": "Soo-jin",
+            "notes": "This is the third note"
+        }
+    ]
+}

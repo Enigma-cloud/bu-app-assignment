@@ -1,0 +1,5 @@
+{"journals": [{"name": "Started work", "date": "01/03/2021", "note": "Read the brief and looked at the template"},
+    {"name": "Event handlers", "date": "07/03/2021", "note": "Wrote js event handlers"},
+    {"name": "Calculator", "date": "14/03/2021", "note": "Wrote calculator with lab checklist"},
+    {"name": "Journal", "date": "01/04/2021", "note": "Wrote journal section"},
+    {"name": "Thought of the day", "date": "07/04/2021", "note": "Thought for the day section done"}]}

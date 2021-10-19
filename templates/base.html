@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/app.css')}}">
+    {% block head %}{% endblock %}
+</head>
+<body onbeforeunload="return alert()">
+    <a id="top"></a>
+    <!-- Navbar -->
+    <nav class="nav">
+        <div class="nav-container">
+            <h1 class="logo" id="home"><a href="/">APP</a></h1>
+            <!-- Links -->
+            <ul>
+                <li><a href="/#homeHeader">ABOUT</a> |</li>
+                <li><a href="/#calcHeader">CALCULATOR</a> |</li>
+                <li><a href="/#journalHeader">JOURNAL</a> | </li>
+                <li><a href="/thought-of-the-day">THOUGHTS</a></li>
+            </ul> 
+        </div>
+    </nav>
+    {% block body %}{% endblock %}
+    <!-- Footer -->
+    <footer>
+        <a href="#top" class="btn" id="toTop">To the top</a>
+    </footer>
+    <script src="static/scripts/app.js"></script>
+</body>
+</html>

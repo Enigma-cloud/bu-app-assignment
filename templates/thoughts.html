@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>APP Assignment - Thought of the Day</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="main-heading">
+        <h3 id="thoughtsHeader">Thought of the Day</h3>
+        <div class="line"></div>
+    </div>
+    <div class="text-content">
+        <div class="sub-container">
+            <div class="sidebar">
+                <h3 class="sub-heading">Entries</h3>
+                <nav class="scrollable-list">
+                    <ol class="selectable-list" id="listThoughts">
+                    </ol>
+                </nav>
+                <button class="btn" id="saveThought">Save</button>
+            </div>
+            <div class="sidebar" id="thoughtEntryContainer">
+                <div id="thoughtEntryDisplay">
+                    <input type="text" id="thoughtID" placeholder="Thought ID" size="15" readonly>
+                    <input type="text" id="thoughtDate" placeholder="Date Added" size="15" readonly>
+                    <textarea name="thoughtEntry" id="thoughtEntry" placeholder="Any thoughts?" rows="30" cols="600" required></textarea>
+                </div>
+                <div id="thoughtEntryBtnContainer">
+                    <button class="btn" id="addThought">Add</button>
+                    <button class="btn" id="clearThought">Clear</button>
+                    <button class="btn" id="deleteThought">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

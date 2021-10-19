@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>APP Assignment - Main</title>
+{% endblock %}
+{% block body %}
+    <!-- Thought of the day -->
+    <div class="thought-container">
+        <div class="thought-subcontainer" id="thoughtHeaderContainer">
+            <a href="/thought-of-the-day" class="thoughtBtn" id="thoughtBtn">
+                <h3 id="thoughtCardTitle">Thought of the day</h3>
+            </a>
+            <button class="thoughtBtn" onclick="changeThought()">Randomize</button>
+        </div>
+        <div class="thought" id="thought"></div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <h1 class="div-header" id="homeHeader"></h1>
+    </header>
+
+    <!-- About Section -->
+    <div class="container">
+        <div class="main-heading">
+            <h3 id="about">About APP</h3> 
+            <div class="line"></div>
+        </div>
+        <h4 class="sub-heading">Key features of the assignment</h4>
+        <div class="text-content">
+            <a class="btn-content">Calculator</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="text-content">
+            <a class="btn-content">Journal</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="text-content">
+            <a class="btn-content">Design</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="text-content">
+            <a class="btn-content">Thoughts</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+    </div>
+
+    <h1 class="div-header" id="calcHeader"></h1>
+    <!-- Calculator Section -->
+    <div class="container">      
+        <div class="main-heading">
+            <h3 id="calculator">Calculator</h3>
+            <div class="line"></div>
+        </div>
+        <div class="text-content">
+            <h3 class="sub-heading">Addition</h3>
+            <div class="calc-display">
+                <input type="string" id="add1"/> + <input type="string" id="add2"/> = <input type="text" id="inputAdd"/>
+            </div>
+            <div class="calc-btn">
+                <button class="btn" id="btnAdd" onclick="addNumbers()">Add</button></p>
+                <button class="btn" id="btnAddAPI" >Add via API</button>
+            </div>
+        </div>
+        <div class="text-content">
+            <h3 class="sub-heading">Subtract</h3>
+            <div class="calc-display">
+                <input type="string" id="sub1"/> - <input type="string" id="sub2"/> = <input type="text" id="inputSubtract"/>
+            </div>
+            <div class="calc-btn">
+                <button class="btn" id="btnSubtract" onclick="subtractNumbers()">Subtract</button>
+                <button class="btn" id="btnSubtractAPI"> Subtract via API</button>
+            </div>
+        </div>
+        <div class="text-content">
+            <h3 class="sub-heading">Multiply</h3>
+            <div class="calc-display">
+                <input type="string" id="multi1"/> x <input type="string" id="multi2"/> = <input type="text" id="inputMultiply"/>
+            </div>
+            <div class="calc-btn">
+                <button class="btn" id="btnMultiply" onclick="multiplyNumbers()">Multiply</button>
+                <button class="btn" id="btnMultiplyAPI">Multiply via API</button>
+            </div>
+        </div>
+        <div class="text-content">
+            <h3 class="sub-heading">Divide</h3>
+            <div class="calc-display">
+                <input type="string" id="divi1"/> / <input type="string" id="divi2"/> = <input type="text" id="inputDivide"/>
+            </div>
+            <div class="calc-btn">
+                <button class="btn" id="btnDivide" onclick="divideNumbers()">Divide</button>
+                <button class="btn" id="btnDivideAPI">Divide via API</button>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="div-header" id="journalHeader"></h1>
+    <!-- Journal Section -->
+    <div class="container wide">
+        <div class="main-heading">
+            <h3 id="journal">Journal</h3>
+            <div class="line"></div>
+        </div>
+
+        <div class="text-content">
+            <div class="sub-container" id="journalFrame">
+                <div class="sidebar" id="journalSelection">
+                    <h3 class="sub-heading">Journal Entries</h3>
+                    <nav class="scrollable-list">
+                        <ol class="selectable-list" id="listEntries">
+                        </ol>
+                    </nav>
+                    <button class="btn" id="btnUploadJournal">upload journal</button>
+                </div>
+                <div class="sidebar">
+                    <div id="journalItem">
+                        <h3 class="sub-heading">Selected Entry</h3>
+                        <div class="form-container" id="selectedDisplay">
+                            <label class="col-25" for="idEntry">ID: </label>
+                            <input class="col-75" type="text" id="idEntry"><br>
+                            <label class="col-25" for="dateEntry">Date: </label>
+                            <input class="col-75" type="text" id="dateEntry"><br>
+                            <label class="col-25" for="namEntry">Name: </label>
+                            <input class="col-75" type="text" id="namEntry"><br>
+                            <label class="col-25" for="txtNote">Notes: </label>
+                            <textarea class="col-75" id="txtNote" name="txtNote" rows="4" cols="50" ></textarea>
+                            <button class="btn right-btn" id="btnDeleteEntry">Delete</button>
+                        </div>
+                    </div>
+                    <div id="addItem">
+                        <h3 class="sub-heading">Add Entry</h3>
+                        <div class="form-container" id="addDisplay">
+                            <label class="col-25" for="idEntry">ID:</label>
+                            <input class="col-75" type="text" id="idAdd" required><br>
+                            <label class="col-25" for="dateEntry">Date: </label>
+                            <input class="col-75" type="text" id="dateAdd" required><br>
+                            <label class="col-25" for="nameEntry">Name: </label>
+                            <input class="col-75" type="text" id="nameAdd" required><br>
+                            <label class="col-25" for="txtEntry">Notes: </label>
+                            <textarea class="col-75" id="txtAdd" name="txtAdd" rows="4" cols="50" required></textarea>
+                            <button class="btn right-btn" id="btnAddEntry">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
